@@ -1,0 +1,13 @@
+networks:
+  platform_net:
+    external: true
+
+services:
+  baby-massage:
+    build: .
+    container_name: baby-massage
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3003:80"
+    networks:
+      - platform_net
