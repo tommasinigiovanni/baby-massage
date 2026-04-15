@@ -3,6 +3,8 @@
 > **IT** · Guida interattiva al massaggio neonatale, tratta dagli appunti di un corso post-parto con ostetrica.  
 > **EN** · Interactive neonatal massage guide, based on notes from a postpartum course with a midwife.
 
+**Live demo:** [baby-massage.disvel.io](https://baby-massage.disvel.io/)
+
 ---
 
 ## 🇮🇹 Italiano
@@ -39,14 +41,24 @@ git clone https://github.com/tuo-username/baby-massage-guide.git
 open guida-massaggio-bimbi.html
 ```
 
-Oppure scarica direttamente il file HTML dalla sezione [Releases](../../releases).
+Oppure scarica direttamente il file HTML dalla sezione [Releases](https://github.com/tommasinigiovanni/baby-massage/releases).
 
 ### Contenuto
 
 ```
 baby-massage-guide/
-└── guida-massaggio-bimbi.html   # L'intera guida, tutto in un file
+├── guida-massaggio-bimbi.html   # L'intera guida, tutto in un file
+├── Dockerfile                   # Serve il file con nginx:alpine
+└── docker-compose.yml           # Deploy su Hetzner (rete esterna platform_net)
 ```
+
+### Deploy con Docker
+
+```bash
+docker compose up -d
+```
+
+Il contenitore espone la guida su `localhost:3003` tramite nginx.
 
 ---
 
@@ -84,14 +96,24 @@ git clone https://github.com/tuo-username/baby-massage-guide.git
 open guida-massaggio-bimbi.html
 ```
 
-Or download the HTML file directly from the [Releases](../../releases) section.
+Or download the HTML file directly from the [Releases](https://github.com/tommasinigiovanni/baby-massage/releases) section.
 
 ### Contents
 
 ```
 baby-massage-guide/
-└── guida-massaggio-bimbi.html   # The entire guide, all in one file
+├── guida-massaggio-bimbi.html   # The entire guide, all in one file
+├── Dockerfile                   # Serves the file with nginx:alpine
+└── docker-compose.yml           # Hetzner deployment (external network platform_net)
 ```
+
+### Deploy with Docker
+
+```bash
+docker compose up -d
+```
+
+The container serves the guide on `localhost:3003` via nginx.
 
 ---
 
